@@ -24,6 +24,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{EBA28F04-A8C7-435A-849D-674FF066F220}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMePackages.txt = ReadMePackages.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
