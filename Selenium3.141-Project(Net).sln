@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptanceTests", "AcceptanceTests\AcceptanceTests.csproj", "{8C151353-A16B-4E22-B7C8-94D9903267EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{77D22995-7B6B-45F7-9CD8-F8B4AAB2F154}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{340121C0-3211-4252-8021-C447E9D37E5C}"
+	ProjectSection(SolutionItems) = preProject
+		CreateRunTimeReport.cmd = CreateRunTimeReport.cmd
+		GenerateMSTests.cmd = GenerateMSTests.cmd
+		RunMSTestCategory.cmd = RunMSTestCategory.cmd
+		RunMSTestName.cmd = RunMSTestName.cmd
+		RunNunitTestCategory.cmd = RunNunitTestCategory.cmd
+		RunSpecflowTests.cmd = RunSpecflowTests.cmd
+		RunVSTestCategory.cmd = RunVSTestCategory.cmd
+		TestResult.html = TestResult.html
+		TestSettings.testsettings = TestSettings.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{EBA28F04-A8C7-435A-849D-674FF066F220}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C151353-A16B-4E22-B7C8-94D9903267EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C151353-A16B-4E22-B7C8-94D9903267EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C151353-A16B-4E22-B7C8-94D9903267EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C151353-A16B-4E22-B7C8-94D9903267EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB230B1E-406E-4502-BF1C-96BAFF8D1D90}
+	EndGlobalSection
+EndGlobal

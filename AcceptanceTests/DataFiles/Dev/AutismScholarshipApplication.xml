@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Student>
+  <firstname>    Selenium Test    </firstname>
+  <lastname>    Selenium Test    </lastname>
+  <age>       20         </age>
+  <DOB>       01/01/2000         </DOB>
+  <middleName>Middle Name</middleName>
+  <maidenName>ODE Maiden Name</maidenName>
+  <gender>Male</gender>
+  <ethnicity>Hispanic</ethnicity>
+  <language>English</language>
+  <SSN>1234</SSN>
+  <birthCity>Columbus</birthCity>
+  <birthState>Ohio</birthState>
+  <county>Allen</county>
+  <residence>045765, Bath</residence>
+  <initialProvider>096263, Alexandria Montessori</initialProvider>
+  <studentETR>true</studentETR>
+  <studentETRCounty>Allen</studentETRCounty>
+  <studentETRSchoolDistrict>045757, Allen East</studentETRSchoolDistrict>
+  <studentEducated>Other School</studentEducated>
+  <publicSchoolCounty>Franklin</publicSchoolCounty>
+  <publicSchoolDistrict>047027, Dublin</publicSchoolDistrict>
+  <ChartedNPCounty>Ashland</ChartedNPCounty>
+  <ChartedNPSchoolName>068338, Ashland Christian</ChartedNPSchoolName>
+  <NonChartedNPCounty>Non-Charted Non Public</NonChartedNPCounty>
+  <OtherSchoolName>Other School Name</OtherSchoolName>
+  <previousGradeLevel>6th Grade</previousGradeLevel>
+  <currentGradeLevel>10th Grade</currentGradeLevel>
+  <newGuardian>Matthew,Woods,05/23/1973,Father</newGuardian>
+
+
+
+</Student>

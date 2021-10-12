@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C151353-A16B-4E22-B7C8-94D9903267EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcceptanceTests</RootNamespace>
+    <AssemblyName>AcceptanceTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Edge.SeleniumTools, Version=3.141.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Edge.SeleniumTools.3.141.2\lib\net45\Microsoft.Edge.SeleniumTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Application\RunTimeData.cs" />
+    <Compile Include="Common\Application\RunTimeVars.cs" />
+    <Compile Include="Common\Application\ProgramTestContext.cs" />
+    <Compile Include="Common\Application\TestRunnerClass.cs" />
+    <Compile Include="Common\Library\Libary.cs" />
+    <Compile Include="Common\Utilities\LogFile.cs" />
+    <Compile Include="Common\Utilities\XmlDataFiles.cs" />
+    <Compile Include="Config\AppConfig.cs" />
+    <Compile Include="Features\E2EWorkflowTests\AutismScholarshipApplication.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutismScholarshipApplication.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\E2EWorkflowTests\EdChoiceScholarshipApplication.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EdChoiceScholarshipApplication.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\E2EWorkflowTests\JPSNScholarshipApplication.feature.cs">
+      <DependentUpon>JPSNScholarshipApplication.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\FunctionalTests\ChangePasswords.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangePasswords.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\E2EWorkflowTests\JPSNProviderApplication.feature.cs">
+      <DependentUpon>JPSNProviderApplication.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\FunctionalTests\FunctionalLoginRoles.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunctionalLoginRoles.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\FunctionalTests\PageTabTest.feature.cs">
+      <DependentUpon>PageTabTest.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\FunctionalTests\MenuTest.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuTest.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\E2EWorkflowTests\AutismProviderApplication.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutismProviderApplication.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\FunctionalTests\Scholarship Application Test.feature.cs">
+      <DependentUpon>Scholarship Application Test.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Features\NUnit Tests\NUnitTest.cs" />
+    <Compile Include="Features\NUnit Tests\TestChromeDriverClass.cs" />
+    <Compile Include="Features\NUnit Tests\TestEdgeDriverClass.cs" />
+    <Compile Include="Features\NUnit Tests\TestFireFoxDriverClass.cs" />
+    <Compile Include="Features\NUnit Tests\TestIEDriverClass.cs" />
+    <Compile Include="Features\TestFiles\GoogleSearch.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GoogleSearch.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\TestFiles\LoginRoles.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginRoles.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\TestFiles\MultipleWebPages.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultipleWebPages.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\TestFiles\TestSpecFlowFeature1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestSpecFlowFeature1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\TestFiles\TestSpecFlowFeature2.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestSpecFlowFeature2.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\TestRunnerInterface.cs" />
+    <Compile Include="PageObjects\AdminPrograms.cs" />
+    <Compile Include="PageObjects\AdvancedStudentSearchPage.cs" />
+    <Compile Include="PageObjects\ApplicationTab.cs" />
+    <Compile Include="PageObjects\CommentsHistoryTab.cs" />
+    <Compile Include="PageObjects\CreditHoursTab.cs" />
+    <Compile Include="PageObjects\DocsTab.cs" />
+    <Compile Include="PageObjects\GeneralTab.cs" />
+    <Compile Include="PageObjects\HeaderPage.cs" />
+    <Compile Include="PageObjects\IEPTab.cs" />
+    <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\Menu.cs" />
+    <Compile Include="PageObjects\NewProviderApplication.cs" />
+    <Compile Include="PageObjects\NewScholarshipApplication.cs" />
+    <Compile Include="PageObjects\ParentStudentTab.cs" />
+    <Compile Include="PageObjects\StudentFinanceSearchPage.cs" />
+    <Compile Include="PageObjects\VerifyPageTabs.cs" />
+    <Compile Include="PageObjects\ParentGuardianTab.cs" />
+    <Compile Include="PageObjects\Student.cs" />
+    <Compile Include="PageObjects\PersonnelTab.cs" />
+    <Compile Include="PageObjects\ProgramSelectionPage.cs" />
+    <Compile Include="PageObjects\ProviderSearchPage.cs" />
+    <Compile Include="PageObjects\RenewProviderApplication.cs" />
+    <Compile Include="PageObjects\SafePage.cs" />
+    <Compile Include="PageObjects\ServicesTab.cs" />
+    <Compile Include="PageObjects\StaffTab.cs" />
+    <Compile Include="PageObjects\StatusFlagsTab.cs" />
+    <Compile Include="PageObjects\StudentTab.cs" />
+    <Compile Include="PageObjects\StudentSearchPage.cs" />
+    <Compile Include="PageObjects\TestPage1.cs" />
+    <Compile Include="PageObjects\TestPage2.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\GoogleSearchSteps.cs" />
+    <Compile Include="Steps\MultipleWebPagesSteps.cs" />
+    <Compile Include="Steps\ProviderApplicationSteps.cs" />
+    <Compile Include="Steps\LoginRolesSteps.cs" />
+    <Compile Include="Steps\MenuSteps.cs" />
+    <Compile Include="Steps\ProgramSelectionSteps.cs" />
+    <Compile Include="Steps\ScholarshipApplicationSteps.cs" />
+    <Compile Include="Steps\SearchSteps.cs" />
+    <Compile Include="Steps\PageTabsSteps.cs" />
+    <Compile Include="Steps\TestSpecFlowFeature2Steps.cs" />
+    <Compile Include="Steps\TestSpecFlowFeature1Steps.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Documentation\ODE Selenium Test Automation Architecture.docx" />
+    <None Include="Features\E2EWorkflowTests\AutismScholarshipApplication.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AutismScholarshipApplication.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\E2EWorkflowTests\EdChoiceScholarshipApplication.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EdChoiceScholarshipApplication.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\E2EWorkflowTests\JPSNScholarshipApplication.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>JPSNScholarshipApplication.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FunctionalTests\ChangePasswords.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangePasswords.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\E2EWorkflowTests\JPSNProviderApplication.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>JPSNProviderApplication.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FunctionalTests\FunctionalLoginRoles.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FunctionalLoginRoles.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FunctionalTests\PageTabTest.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PageTabTest.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FunctionalTests\MenuTest.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MenuTest.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\E2EWorkflowTests\AutismProviderApplication.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AutismProviderApplication.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FunctionalTests\Scholarship Application Test.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Scholarship Application Test.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TestFiles\GoogleSearch.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GoogleSearch.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TestFiles\LoginRoles.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoginRoles.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TestFiles\MultipleWebPages.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MultipleWebPages.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TestFiles\TestSpecFlowFeature1.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestSpecFlowFeature1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\TestFiles\TestSpecFlowFeature2.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TestSpecFlowFeature2.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Support\MakeProjectDirs.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\DataAccess\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="DataFiles\Local\" />
+    <Folder Include="DataFiles\Prod\" />
+    <Folder Include="Features\POC\" />
+    <Folder Include="Features\Requirements\" />
+    <Folder Include="Features\StoryCards\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataFiles\Dev\JSPNScholarshipApplication.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DataFiles\Dev\AutismScholarshipApplication.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DataFiles\Example\XMLTestFile1.xml" />
+    <Content Include="DataFiles\QA\JPSNScholarshipApplication.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DataFiles\QA\AutismScholarshipApplication.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DataFiles\RunTimeData.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="DataFiles\Upload File1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.12.0\build\net35\NUnit3TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.1\build\SpecFlow.targets'))" />
+  </Target>
+  <Import Project="..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
